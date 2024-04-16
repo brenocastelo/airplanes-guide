@@ -13,6 +13,14 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+function TopNav() {
+  return (
+    <div className="flex h-24 w-full items-center border-b-[1px] p-6 ">
+      <div>Airplanes guide</div>
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
-        <h1>Root layout</h1>
+        <TopNav />
         {children}
       </body>
     </html>
